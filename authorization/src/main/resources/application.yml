@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myapp_db
+    username: user
+    password: pass
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret: ${JWT_SECRET}
+  accessExpirationMin: ${JWT_ACCESS_EXPIRATION_MIN}
+  refreshExpirationDays: ${JWT_REFRESH_EXPIRATION_DAYS}
